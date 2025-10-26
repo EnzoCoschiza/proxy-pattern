@@ -80,7 +80,7 @@ export function PatternDiagram() {
                 onClick={() => setUserType('authorized')}
                 className={`h-auto py-3 px-6 ${
                   userType === 'authorized'
-                    ? 'bg-zinc-700 hover:bg-zinc-600 text-zinc-100 border border-zinc-600'
+                    ? 'bg-green-700 hover:bg-green-600 text-zinc-100 border border-green-600'
                     : 'border-zinc-600 text-zinc-300 hover:bg-zinc-800'
                 }`}
               >
@@ -139,8 +139,8 @@ export function PatternDiagram() {
             <div className={`flex flex-col items-center transition-opacity ${
               flowSteps[0].active || flowSteps[0].completed ? 'opacity-100' : 'opacity-30'
             }`}>
-              <Badge variant="default" className="mb-2">1. read(username)</Badge>
-              <ArrowDown className="w-8 h-8 text-primary animate-bounce" />
+              <Badge variant="default" className="mb-2 bg-zinc-700 text-zinc-100">1. read(username)</Badge>
+              <ArrowDown className="w-8 h-8 text-zinc-100 animate-bounce" />
             </div>
 
             {/* Proxy */}
@@ -278,8 +278,8 @@ export function PatternDiagram() {
             <div className={`flex flex-col items-center transition-opacity ${
               flowSteps[4].active || flowSteps[4].completed ? 'opacity-100' : 'opacity-30'
             }`}>
-              <ArrowUp className="w-8 h-8 text-primary animate-bounce" />
-              <Badge variant="default" className="mt-2">4. Retorna documento</Badge>
+              <ArrowUp className="w-8 h-8 text-zinc-100 animate-bounce" />
+              <Badge variant="default" className="mt-2 bg-zinc-700 text-zinc-100">4. Retorna documento</Badge>
             </div>
 
             {/* Respuesta */}

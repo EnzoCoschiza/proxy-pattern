@@ -58,9 +58,10 @@ function App() {
       {/* Header */}
       <header className="bg-black/40 backdrop-blur-lg border-b border-zinc-700/50">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Shield className="w-10 h-10 text-zinc-100" />
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img src="/spy.svg" alt="Spy Icon" className="w-12 h-12" />
             <h1 className="text-4xl font-bold text-zinc-100 tracking-tight">Patrón de Diseño: PROXY</h1>
+            <Shield className="w-10 h-10 text-zinc-100" />
           </div>
           <p className="text-center text-zinc-300 text-lg font-light tracking-wide">
             AGENCIA DE INTELIGENCIA ARGENTINA - SISTEMA DE ACCESO SEGURO
@@ -183,7 +184,7 @@ function App() {
                     onClick={handleReset}
                     variant="outline"
                     size="sm"
-                    className="border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-zinc-100"
+                    className="border-zinc-600 bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700 hover:text-zinc-100"
                   >
                     <RotateCcw className="w-4 h-4 mr-2" />
                     Reiniciar
@@ -271,13 +272,13 @@ function App() {
                   )}
 
                   {proxy.isAuthorized(username) && (
-                    <div className="flex items-start gap-3 p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg">
-                      <CheckCircle className="w-6 h-6 text-zinc-400 flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-3 p-4 bg-green-950/30 border border-green-800/50 rounded-lg">
+                      <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-zinc-100 mb-1">
+                        <p className="font-semibold text-green-400 mb-1">
                           Acceso Autorizado
                         </p>
-                        <p className="text-zinc-300 text-sm">
+                        <p className="text-green-300/80 text-sm">
                           Este es el documento real. Solo usuarios autorizados pueden ver esta información.
                         </p>
                       </div>
