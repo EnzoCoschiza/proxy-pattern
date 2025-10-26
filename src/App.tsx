@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { DocumentProxy, AccessLog } from './proxy/DocumentProxy';
+import { PatternDiagram } from './components/PatternDiagram';
 import './App.css';
 
 const proxy = new DocumentProxy();
 
+type Page = 'game' | 'diagram';
+
 function App() {
+  const [currentPage, setCurrentPage] = useState<Page>('game');
   const [username, setUsername] = useState('');
   const [document, setDocument] = useState('');
   const [logs, setLogs] = useState<AccessLog[]>([]);
@@ -54,8 +58,26 @@ function App() {
       <header className="header">
         <h1>🛡️ Patrón de Diseño: PROXY</h1>
         <p className="subtitle">Agencia de Inteligencia Argentina - Sistema de Acceso Seguro</p>
+        
+        <nav className="nav-tabs">
+          <button 
+            className={`nav-tab ${currentPage === 'game' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('game')}
+          >
+            🎮 Juego Interactivo
+          </button>
+          <button 
+            className={`nav-tab ${currentPage === 'diagram' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('diagram')}
+          >
+            📐 Diagrama Visual
+          </button>
+        </nav>
       </header>
 
+      {currentPage === 'diagram' ? (
+        <PatternDiagram />
+      ) : (
       <div className="container">
         <div className="scenario-box">
           <h2>📋 Escenario</h2>
@@ -187,6 +209,7 @@ function App() {
           </div>
         </div>
       </div>
+      )}
 
       <footer className="footer">
         <p>💡 Este es un ejemplo educativo del patrón de diseño Proxy</p>

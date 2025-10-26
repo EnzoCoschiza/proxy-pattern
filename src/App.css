@@ -33,6 +33,39 @@ body {
 .subtitle {
   font-size: 1.1rem;
   opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.nav-tab {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.nav-tab:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-tab.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -427,6 +460,17 @@ body {
   }
 
   .subtitle {
+    font-size: 1rem;
+  }
+
+  .nav-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-tab {
+    width: 100%;
+    padding: 0.8rem 1rem;
     font-size: 1rem;
   }
 

@@ -28,6 +28,24 @@ Por suerte, los ingenieros de la agencia diseñaron un **objeto Proxy** que:
 3. **Abrir en el navegador:**
    - El proyecto se ejecutará en `http://localhost:5173`
 
+## 📱 Navegación
+
+El proyecto cuenta con dos secciones principales:
+
+### 🎮 Juego Interactivo
+- Interfaz tipo juego donde puedes intentar acceder al documento
+- Sistema de logs en tiempo real
+- Usuarios predefinidos para probar
+- Visualización de documentos reales y falsos
+
+### 📐 Diagrama Visual
+- Diagrama interactivo del flujo del patrón Proxy
+- Animación paso a paso del proceso
+- Selector de tipo de usuario (autorizado/no autorizado)
+- Explicación visual de cada componente
+- Beneficios del patrón
+- Ejemplos de código
+
 ## 🏗️ Estructura del Patrón Proxy
 
 ### 1. **RealDocument** (Objeto Real)
