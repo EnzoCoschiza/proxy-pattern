@@ -26,7 +26,7 @@ Por suerte, los ingenieros de la agencia diseñaron un **objeto Proxy** que:
    ```
 
 3. **Abrir en el navegador:**
-   - El proyecto se ejecutará en `http://localhost:5173`
+   - El proyecto se ejecutará en `http://localhost:5176`
 
 ## 📱 Navegación
 
@@ -103,7 +103,7 @@ En este ejemplo, el Proxy actúa como un **Protection Proxy** que:
 
 ## 🎨 Características
 
-- ✨ Interfaz visual atractiva y moderna
+- ✨ Interfaz visual atractiva y moderna con tema oscuro profesional
 - 📊 Sistema de logs en tiempo real
 - 🎭 Simulación de accesos autorizados y no autorizados
 - 🎮 Experiencia interactiva tipo juego
@@ -116,6 +116,19 @@ Este proyecto es ideal para:
 - Ver una aplicación práctica del patrón
 - Aprender sobre control de acceso y seguridad
 - Practicar React y TypeScript
+- Aprender sobre despliegue con Docker
+
+## 🏗️ Build para Producción
+
+```bash
+# Build local
+npm run build
+
+# Preview del build
+npm run preview
+```
+
+Los archivos optimizados se generarán en la carpeta `dist/`
 
 ---
 

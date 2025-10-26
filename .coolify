@@ -1,0 +1,9 @@
+# Configuración para Coolify
+# Este archivo es opcional pero ayuda a Coolify a entender tu proyecto
+
+# Puerto en el que corre la aplicación
+PORT=80
+
+# Variables de entorno (si las necesitas)
+# NODE_ENV=production
+
