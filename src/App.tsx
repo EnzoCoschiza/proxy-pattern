@@ -57,15 +57,19 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-neutral-900 to-black">
       {/* Header */}
       <header className="bg-black/40 backdrop-blur-lg border-b border-zinc-700/50">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-6 relative">
           <div className="flex items-center justify-center gap-4 mb-4">
             <img src="/spy.svg" alt="Spy Icon" className="w-12 h-12" />
             <h1 className="text-4xl font-bold text-zinc-100 tracking-tight">Patrón de Diseño: PROXY</h1>
             <Shield className="w-10 h-10 text-zinc-100" />
           </div>
           <p className="text-center text-zinc-300 text-lg font-light tracking-wide">
-            AGENCIA DE INTELIGENCIA ARGENTINA - SISTEMA DE ACCESO SEGURO
+            AGENCIA DE INTELIGENCIA ARGENTINA - SISTEMA DE ACCESO SEGURO - Kaizen
           </p>
+          {/* Logo Kaizen */}
+          <div className="absolute top-4 right-4">
+            <img src="/kaizen-logo.png" alt="Kaizen Evolving Group" className="h-16 w-auto" />
+          </div>
         </div>
       </header>
 
@@ -328,8 +332,13 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-black/40 backdrop-blur-lg border-t border-zinc-800 mt-12">
-        <div className="container mx-auto px-4 py-6 text-center text-zinc-400">
-          <p className="text-base tracking-wide">💡 EJEMPLO EDUCATIVO DEL PATRÓN DE DISEÑO PROXY</p>
+        <div className="container mx-auto px-4 py-6">
+          <div className="text-center space-y-2">
+            <p className="text-base tracking-wide text-zinc-400">💡 EJEMPLO EDUCATIVO DEL PATRÓN DE DISEÑO PROXY</p>
+            <p className="text-sm text-zinc-500">
+              Made by <span className="text-zinc-300 font-semibold">Kaizen</span> - Diseño de Sistemas de Información
+            </p>
+          </div>
         </div>
       </footer>
     </div>
