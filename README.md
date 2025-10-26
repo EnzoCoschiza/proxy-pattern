@@ -30,7 +30,16 @@ Por suerte, los ingenieros de la agencia diseñaron un **objeto Proxy** que:
 
 ## 📱 Navegación
 
-El proyecto cuenta con dos secciones principales:
+El proyecto cuenta con tres secciones principales:
+
+### 📚 Aprender
+- Explicación completa del patrón Proxy
+- 6 tipos diferentes de Proxy con ejemplos
+- Características de nuestro DocumentProxy
+- Flujo de trabajo detallado
+- Código simplificado
+- Cuándo usar y cuándo evitar el patrón
+- Diseño educativo y visualmente atractivo
 
 ### 🎮 Juego Interactivo
 - Interfaz tipo juego donde puedes intentar acceder al documento
@@ -107,7 +116,10 @@ En este ejemplo, el Proxy actúa como un **Protection Proxy** que:
 - 📊 Sistema de logs en tiempo real
 - 🎭 Simulación de accesos autorizados y no autorizados
 - 🎮 Experiencia interactiva tipo juego
-- 📱 Diseño responsive
+- 📱 Diseño completamente responsive (móvil, tablet, desktop)
+- 📚 Página educativa con 6 tipos de Proxy explicados
+- 🎯 Ejemplos prácticos y casos de uso reales
+- 🎨 Diseño moderno con gradientes y animaciones
 
 ## 📖 Aprendizaje
 

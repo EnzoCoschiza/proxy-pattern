@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { DocumentProxy, AccessLog } from './proxy/DocumentProxy';
 import { PatternDiagram } from './components/PatternDiagram';
+import { LearnPage } from './pages/LearnPage';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Shield, Play, RotateCcw, User, FileText, AlertTriangle, CheckCircle, Terminal } from 'lucide-react';
+import { Shield, Play, RotateCcw, User, FileText, AlertTriangle, CheckCircle, Terminal, BookOpen } from 'lucide-react';
 
 const proxy = new DocumentProxy();
 
@@ -76,19 +77,28 @@ function App() {
       </header>
 
       <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-6 md:py-8">
-        <Tabs defaultValue="game" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-4 sm:mb-6 md:mb-8 bg-zinc-800/50 border border-zinc-700">
+        <Tabs defaultValue="learn" className="w-full">
+          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-4 sm:mb-6 md:mb-8 bg-zinc-800/50 border border-zinc-700">
+            <TabsTrigger value="learn" className="text-xs sm:text-sm md:text-base data-[state=active]:bg-zinc-100 data-[state=active]:text-zinc-900">
+              <BookOpen className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+              <span className="hidden sm:inline">Aprender</span>
+              <span className="sm:hidden">Info</span>
+            </TabsTrigger>
             <TabsTrigger value="game" className="text-xs sm:text-sm md:text-base data-[state=active]:bg-zinc-100 data-[state=active]:text-zinc-900">
               <Play className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-              <span className="hidden xs:inline">Juego Interactivo</span>
-              <span className="xs:hidden">Juego</span>
+              <span className="hidden sm:inline">Juego</span>
+              <span className="sm:hidden">Jugar</span>
             </TabsTrigger>
             <TabsTrigger value="diagram" className="text-xs sm:text-sm md:text-base data-[state=active]:bg-zinc-100 data-[state=active]:text-zinc-900">
               <FileText className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-              <span className="hidden xs:inline">Diagrama Visual</span>
-              <span className="xs:hidden">Diagrama</span>
+              <span className="hidden sm:inline">Diagrama</span>
+              <span className="sm:hidden">Flujo</span>
             </TabsTrigger>
           </TabsList>
+
+          <TabsContent value="learn">
+            <LearnPage />
+          </TabsContent>
 
           <TabsContent value="game" className="space-y-4 sm:space-y-6">
             {/* Escenario */}
