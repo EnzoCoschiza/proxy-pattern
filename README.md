@@ -81,7 +81,10 @@ El proyecto cuenta con dos secciones principales:
 - **React** - Biblioteca de UI
 - **TypeScript** - Tipado estático
 - **Vite** - Build tool y dev server
-- **CSS3** - Estilos y animaciones
+- **Tailwind CSS** - Framework de CSS utility-first
+- **shadcn/ui** - Componentes UI modernos y accesibles
+- **Radix UI** - Primitivas de UI sin estilos
+- **Lucide React** - Iconos modernos
 
 ## 📚 Concepto del Patrón Proxy
 
