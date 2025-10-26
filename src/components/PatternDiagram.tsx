@@ -49,24 +49,28 @@ export function PatternDiagram() {
   return (
     <div className="space-y-8">
       {/* Header */}
-      <Card className="border-2 border-white/20 bg-white/95 backdrop-blur">
+      <Card className="border border-zinc-700/50 bg-zinc-900/90 backdrop-blur text-zinc-100">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl">📐 Diagrama del Patrón Proxy</CardTitle>
-          <CardDescription className="text-lg">
+          <CardTitle className="text-3xl text-zinc-100">📐 DIAGRAMA DEL PATRÓN PROXY</CardTitle>
+          <CardDescription className="text-lg text-zinc-400">
             Visualización interactiva del flujo de comunicación
           </CardDescription>
         </CardHeader>
       </Card>
 
       {/* Controles */}
-      <Card className="border-2 border-white/20 bg-white/95 backdrop-blur">
+      <Card className="border border-zinc-700/50 bg-zinc-900/90 backdrop-blur text-zinc-100">
         <CardContent className="pt-6">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div className="flex gap-3 flex-wrap justify-center">
               <Button
                 variant={userType === 'unauthorized' ? 'default' : 'outline'}
                 onClick={() => setUserType('unauthorized')}
-                className="h-auto py-3 px-6"
+                className={`h-auto py-3 px-6 ${
+                  userType === 'unauthorized'
+                    ? 'bg-red-900/80 hover:bg-red-800 text-zinc-100 border border-red-800'
+                    : 'border-zinc-600 text-zinc-300 hover:bg-zinc-800'
+                }`}
               >
                 <span className="text-xl mr-2">🦹‍♂️</span>
                 Usuario No Autorizado (Hacker)
@@ -74,7 +78,11 @@ export function PatternDiagram() {
               <Button
                 variant={userType === 'authorized' ? 'default' : 'outline'}
                 onClick={() => setUserType('authorized')}
-                className="h-auto py-3 px-6"
+                className={`h-auto py-3 px-6 ${
+                  userType === 'authorized'
+                    ? 'bg-zinc-700 hover:bg-zinc-600 text-zinc-100 border border-zinc-600'
+                    : 'border-zinc-600 text-zinc-300 hover:bg-zinc-800'
+                }`}
               >
                 <span className="text-xl mr-2">🕵️</span>
                 Usuario Autorizado (Agente)
@@ -84,7 +92,7 @@ export function PatternDiagram() {
               onClick={animateFlow}
               disabled={isAnimating}
               size="lg"
-              className="px-8"
+              className="px-8 bg-zinc-100 hover:bg-zinc-200 text-zinc-900"
             >
               <Play className="w-4 h-4 mr-2" />
               {isAnimating ? 'Animando...' : 'Animar Flujo'}
@@ -94,7 +102,7 @@ export function PatternDiagram() {
       </Card>
 
       {/* Diagrama */}
-      <Card className="border-2 border-white/20 bg-gradient-to-br from-slate-50 to-slate-100">
+      <Card className="border border-zinc-700/50 bg-gradient-to-br from-zinc-900 to-zinc-800">
         <CardContent className="pt-8">
           <div className="flex flex-col items-center gap-6 max-w-4xl mx-auto">
             
@@ -312,52 +320,52 @@ export function PatternDiagram() {
       </Card>
 
       {/* Beneficios */}
-      <Card className="border-2 border-white/20 bg-white/95 backdrop-blur">
+      <Card className="border border-zinc-700/50 bg-zinc-900/90 backdrop-blur text-zinc-100">
         <CardHeader>
-          <CardTitle className="text-center text-2xl">🎯 Beneficios del Patrón Proxy</CardTitle>
+          <CardTitle className="text-center text-2xl text-zinc-100">🎯 BENEFICIOS DEL PATRÓN PROXY</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+            <Card className="bg-zinc-800/50 border-zinc-700">
               <CardHeader>
                 <div className="text-4xl mb-2">🔒</div>
-                <CardTitle className="text-lg">Control de Acceso</CardTitle>
+                <CardTitle className="text-lg text-zinc-100">Control de Acceso</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-zinc-300">
                   El Proxy verifica permisos antes de permitir acceso al objeto real
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+            <Card className="bg-zinc-800/50 border-zinc-700">
               <CardHeader>
                 <div className="text-4xl mb-2">📊</div>
-                <CardTitle className="text-lg">Logging y Auditoría</CardTitle>
+                <CardTitle className="text-lg text-zinc-100">Logging y Auditoría</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-zinc-300">
                   Registra todas las operaciones para análisis de seguridad
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+            <Card className="bg-zinc-800/50 border-zinc-700">
               <CardHeader>
                 <div className="text-4xl mb-2">🛡️</div>
-                <CardTitle className="text-lg">Protección del Objeto Real</CardTitle>
+                <CardTitle className="text-lg text-zinc-100">Protección del Objeto Real</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-zinc-300">
                   El cliente nunca accede directamente al objeto real
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+            <Card className="bg-zinc-800/50 border-zinc-700">
               <CardHeader>
                 <div className="text-4xl mb-2">🎭</div>
-                <CardTitle className="text-lg">Respuestas Personalizadas</CardTitle>
+                <CardTitle className="text-lg text-zinc-100">Respuestas Personalizadas</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-zinc-300">
                   Puede devolver diferentes respuestas según el contexto
                 </p>
               </CardContent>
@@ -367,17 +375,17 @@ export function PatternDiagram() {
       </Card>
 
       {/* Código */}
-      <Card className="border-2 border-white/20 bg-white/95 backdrop-blur">
+      <Card className="border border-zinc-700/50 bg-zinc-900/90 backdrop-blur text-zinc-100">
         <CardHeader>
-          <CardTitle className="text-center text-2xl">💻 Estructura del Código</CardTitle>
+          <CardTitle className="text-center text-2xl text-zinc-100">💻 ESTRUCTURA DEL CÓDIGO</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <div className="bg-primary text-primary-foreground px-4 py-2 rounded-t-lg font-semibold">
+              <div className="bg-zinc-800 text-zinc-100 px-4 py-2 rounded-t-lg font-semibold border border-zinc-700">
                 🏢 RealDocument.ts
               </div>
-              <pre className="bg-gray-900 text-gray-100 p-4 rounded-b-lg overflow-x-auto text-sm">
+              <pre className="bg-black/50 text-zinc-100 p-4 rounded-b-lg overflow-x-auto text-sm border border-zinc-800 border-t-0">
 {`class RealDocument {
   private confidentialContent: string;
   
@@ -388,10 +396,10 @@ export function PatternDiagram() {
               </pre>
             </div>
             <div>
-              <div className="bg-primary text-primary-foreground px-4 py-2 rounded-t-lg font-semibold">
+              <div className="bg-zinc-800 text-zinc-100 px-4 py-2 rounded-t-lg font-semibold border border-zinc-700">
                 🛡️ DocumentProxy.ts
               </div>
-              <pre className="bg-gray-900 text-gray-100 p-4 rounded-b-lg overflow-x-auto text-sm">
+              <pre className="bg-black/50 text-zinc-100 p-4 rounded-b-lg overflow-x-auto text-sm border border-zinc-800 border-t-0">
 {`class DocumentProxy {
   private realDocument: RealDocument;
   private authorizedUsers: Set<string>;
