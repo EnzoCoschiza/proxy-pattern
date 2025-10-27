@@ -135,6 +135,27 @@ function App() {
                     <span className="text-zinc-300 text-sm sm:text-base">El hacker queda satisfecho sin saber que fue engañado</span>
                   </li>
                 </ul>
+
+                {/* Video del Agente */}
+                <div className="max-w-2xl mx-auto pt-2">
+                  <div className="relative rounded-lg overflow-hidden border-2 border-zinc-700/50 bg-black shadow-xl">
+                    <video
+                      className="w-full h-auto"
+                      controls
+                      loop
+                      playsInline
+                      preload="metadata"
+                    >
+                      <source src="/video-agente.mp4" type="video/mp4" />
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                  <div className="mt-2 text-center">
+                    <p className="text-xs sm:text-sm text-zinc-400">
+                      🕵️ Agente de Inteligencia Protegiendo Información Clasificada
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
