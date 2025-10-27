@@ -184,30 +184,32 @@ export function LearnPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="relative z-10 p-3 sm:p-4 md:p-6">
-          <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-zinc-800/50 bg-black">
-            {/* Video Container with 16:9 Aspect Ratio */}
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/QiJhLAgm5_8"
-                title="Patrón de Diseño Proxy - Tutorial"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+          <div className="max-w-3xl mx-auto">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-zinc-800/50 bg-black">
+              {/* Video Container with 16:9 Aspect Ratio */}
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/QiJhLAgm5_8"
+                  title="Patrón de Diseño Proxy - Tutorial"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              {/* Decorative gradient overlay on edges */}
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/20 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/20 via-transparent to-transparent"></div>
+              </div>
             </div>
-            {/* Decorative gradient overlay on edges */}
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/20 via-transparent to-transparent"></div>
-              <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/20 via-transparent to-transparent"></div>
+            {/* Video Info */}
+            <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-zinc-800/30 rounded-lg border border-zinc-700/50 backdrop-blur">
+              <p className="text-xs sm:text-sm text-zinc-300 text-center leading-relaxed">
+                💡 <strong className="text-zinc-100">Tip:</strong> Mira este video antes de explorar el juego interactivo 
+                para comprender mejor los conceptos del patrón Proxy
+              </p>
             </div>
-          </div>
-          {/* Video Info */}
-          <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-zinc-800/30 rounded-lg border border-zinc-700/50 backdrop-blur">
-            <p className="text-xs sm:text-sm text-zinc-300 text-center leading-relaxed">
-              💡 <strong className="text-zinc-100">Tip:</strong> Mira este video antes de explorar el juego interactivo 
-              para comprender mejor los conceptos del patrón Proxy
-            </p>
           </div>
         </CardContent>
       </Card>
