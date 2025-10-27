@@ -146,7 +146,7 @@ function App() {
                       playsInline
                       preload="metadata"
                     >
-                      <source src="/video-agente.mp4" type="video/mp4" />
+                      <source src="/video-agente2.mp4" type="video/mp4" />
                       Tu navegador no soporta el elemento de video.
                     </video>
                   </div>
